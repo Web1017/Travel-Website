@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Font Awesome-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Travelogged</title>
+  </head>
+
+  <body id="home" class = "scrollspy">
+
+      <!-- Navbar Section -->
+        <div class="navbar-fixed">
+            <nav class="grey">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a href="#" class="brand-logo">Travelogged</a>
+                        <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                            <i class="material-icons">menu</i>
+                        </a>
+                        <ul class="right hide-on-med-and-down">
+                            <li>
+                                <a href="#home">Home</a>
+                            </li>
+                            <li>
+                                 <a href="#search">Search</a>
+                             </li>
+                             <li>
+                                  <a href="#popular">Top Places</a>
+                             </li>
+                             <li>
+                                  <a href="#gallery">Gallery</a>
+                             </li>
+                             <li>
+                                  <a href="#contact">Contact Us</a>
+                              </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <ul class="sidenav" id ="mobile-nav">
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                     <a href="#search">Search</a>
+                 </li>
+                 <li>
+                      <a href="#popular">Top Places</a>
+                 </li>
+                 <li>
+                      <a href="#gallery">Gallery</a>
+                 </li>
+                 <li>
+                      <a href="#contact">Contact Us</a>
+                  </li>
+            </ul>
+
+            <!-- Section - Slider -->
+    <section class="slider">
+            <ul class="slides">
+                    <li>
+                      <img src="img/pexels-photo-1.jpeg"> <!-- random image -->
+                      <div class="caption center-align">
+                        <h2>Follow Your Destination</h2>
+                        <h5 class="light grey-text text-lighten-3 hide-on-small-only">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure, totam. Quod soluta earum.</h5>
+                      </div>
+                    </li>
+                    <li>
+                      <img src="img/pexels-photo-2.jpeg"> <!-- random image -->
+                      <div class="caption left-align">
+                        <h2>We Take You wherever you need to go</h2>
+                        <h5 class="light grey-text text-lighten-3 hide-on-small-only">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum distinctio unde sunt possimus alias rem </h5>
+                      </div>
+                    </li>
+                    <li>
+                      <img src="img/pexels-photo-3.jpeg"> <!-- random image -->
+                      <div class="caption right-align">
+                        <h2>Perfect Gataways</h2>
+                        <h5 class="light grey-text text-lighten-3 hide-on-small-only">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur deserunt odit similique </h5>
+                      </div>
+                    </li>
+                  </ul>
+    </section>
+
+    <!-- Section - Search -->
+    <section id="search" class="section section-search teal darken-1 white-text center scrollspy">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <h3>Search Destinations</h3>
+            <div class="input-field">
+                  <input type="text" class="white grey-text autocomplete" id="autocomplete-input" placeholder ="France, Greece, Italy, Germany, etc...">
+
+                  </div>       
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section - Icon Boxes -->
+    <section class="section section-icons grey lighten-4 center">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m4">
+              <div class="card-panel">
+                  <i class="material-icons large grey-text">room</i>
+                  <h4>Choose Where</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, quos.</p>
+              </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="card-panel">
+                <i class="material-icons large grey-text">store</i>
+                <h4>Travel Shop</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, quos.</p>
+            </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel">
+              <i class="material-icons large grey-text">airplanemode_active</i>
+              <h4>Fly Safer</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, quos.</p>
+          </div>
+      </div>
+        </div>
+      </div>
+</section>
+
+    
+
+    <!--JavaScript for optimized loading-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+    <script>
+            //SideNav
+            const sideNav = document.querySelector('.sidenav');
+            M.Sidenav.init(sideNav, {});
+
+            //Slider Initialization
+            const slider = document.querySelector('.slider');
+            M.Slider.init(slider, {
+                indicators: false,
+                height: 500,
+                transition: 200,
+                interval: 6000
+            });
+
+            //Autocomplete 
+            const ac = document.querySelector('.autocomplete');
+            M.Autocomplete.init(ac, {
+                data: {
+                  "Greece": null,
+                  "Spain": null,
+                  "Italy": null,
+                  "Russia": null,
+                  "Cuba": null,
+                  "England": null,
+                  "Canada": null,
+
+                }
+            });
+
+    </script>
+  </body>
+</html>
+      
